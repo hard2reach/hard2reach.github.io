@@ -1,0 +1,304 @@
+body {
+  max-width: 1100px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #222;
+  color: #FFF;
+  padding: 36px 50px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+p,
+ol,
+ul,
+details {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ol {
+  margin: 0;
+  padding-left: 1.5em;
+  list-style-position: outside;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.5em;
+  list-style: none;
+}
+
+ul li::marker {
+  content: "\2013   ";
+}
+
+details {
+  color: #AAA;
+  font-style: italic;
+}
+
+summary {
+  color: #FFF;
+  list-style: none;
+  cursor: pointer;
+}
+
+summary:hover {
+  color: #FEE189;
+}
+
+summary::after {
+  font-style: normal;
+  content: ' \25B6';
+}
+
+details[open] summary::after {
+  font-style: normal;
+  content: ' \25BC';
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FEE189;
+}
+
+img {
+  width: 400px;
+  height: auto;
+  border: 1px solid #8B4513;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+img.graph {
+  width: 453px;
+}
+
+.img-block, .fig-block {
+  float: right;
+  padding: 0;
+  margin: 0 0 0.8em 1.5em;
+}
+
+.caption {
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.activelog {
+  font-style: italic;
+}
+
+.quote {
+  font-style: italic;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.quote p {
+  margin: 0;
+}
+
+.quote p + p {
+  margin-top: 0.62em;
+}
+
+.break {
+  color: #FEE189;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.firstfix {
+  margin-bottom: 1.7em;
+}
+
+.lastfix {
+  margin-top: -0.7em;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 1100px;
+  transform: translateX(-50%);
+  height: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 25px;
+  right: -25px;
+  pointer-events: auto;
+}
+
+@media (max-width: 1200px) {
+  .nav-wrapper {
+    width: 100%;
+    transform: none;
+    left: 0;
+  }
+  .nav-menu {
+    right: 25px;
+  }
+}
+
+.burger {
+  background: #8B4513;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 2px 0;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #333;
+  border: 1px solid #8B4513;
+  border-radius: 5px;
+  padding: 3px 15px;
+  min-width: 100px;
+  max-width: 300px;
+  white-space: nowrap;
+}
+
+.menu-content a:last-child {
+  border-bottom: none;
+}
+
+.menu-content a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid #555;
+}
+
+.menu-content a:hover {
+  color: #FEE189;
+}
+
+/* landing page */
+body.landing {
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.lp-site {
+  font-size: 1em;
+  letter-spacing: 0.33em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 3em;
+}
+
+.lp-option {
+  display: inline-block;
+  font-weight: bold;
+  border-bottom: 2px solid #8B4513;
+  padding-bottom: 3px;
+  margin-bottom: 0.45em;
+}
+
+.lp-option:hover {
+  border-bottom-color: #FEE189;
+}
+
+.lp-hint {
+  font-size: 0.8em;
+  color: #AAA;
+  font-style: italic;
+  margin: 0;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  body {
+    position: relative;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 36px 12px;
+  }
+  img {
+    max-width: 75%;
+    width: 300px;
+    height: auto;
+    float: none;
+  }
+  img.graph {
+    max-width: 90%;
+    width: 453px;
+  }
+  .img-block {
+    float: none;
+    margin: 0 0 1.4em 0;
+  }
+  .fig-block {
+    float: none;
+    margin: 1em 0 1em 0;
+  }
+}
+
+/* touch */
+@media (pointer: coarse) {
+  a:hover {
+    color: #FFF;
+  }
+  summary:hover {
+    color: #FFF;
+  }
+  .menu-content a:hover {
+    color: #FFF;
+  }
+  .lp-option:hover {
+    border-bottom-color: #8B4513;
+  }
+}
